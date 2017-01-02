@@ -8,6 +8,7 @@
 //var config_toolbar_present = false; 
 var listOfLangsInNotebook = [];
 var log_prefix = '[nbTranslate] ';
+var nbTranslate_toolbarNotYetDisplayed = true;
 
 var langs = {
     'auto': 'Automatic',
@@ -267,7 +268,13 @@ function show_mdcells(displayLangs) {
     }
 
 function translateToolbarToggle(){
-    $("#nbTranslate_toolbar").toggle()
+    if (nbTranslate_toolbarNotYetDisplayed){
+        buildTranslateToolbar(); //rebuild it
+        nbTranslate_toolbarNotYetDisplayed = false;
+        $("#nbTranslate_toolbar").show();
+    }
+    else
+        $("#nbTranslate_toolbar").toggle();
 }
 
 function buildTranslateToolbar(callback) {
