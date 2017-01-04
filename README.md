@@ -3,7 +3,7 @@
 This extension
 
 - helps converting markdown cells in a notebook from a language to another (optionally using **Google translate**),
-- enable to selectively display cells from a given language in a multilanguage notebook. 
+- enables to selectively display cells from a given language in a multilanguage notebook. 
 
 Basically, the extension allows to copy the original cell into a new one for editing and translating. Optionally, the cell source text can be passed through `google translate` and the result inserted in the new cell. Basic markdown structures (e.g. bold, emphasis, lists) are preserved/restored after conversion, to the best extent, but this is not perfect, and usually one has to correct the text and structures afterward. Similarly, equations are extracted before conversion and restored in the result. It seems that when translating from lang1 to lang2, the best results are obtained by taking English as an intermediate language.
 
